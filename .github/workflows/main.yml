@@ -28,7 +28,7 @@ jobs:
 
   image_scan:
     name: Build image and run Image scan
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
 
     steps:
     - name: Checkout Code
