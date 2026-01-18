@@ -33,6 +33,12 @@ jobs:
     steps:
     - name: Checkout Code
       uses: actions/checkout@v2
+  
+    - name: Verify Docker
+      run: |
+        docker version
+        docker info
+        
     - name: set up docker
       uses: docker-practice/actions-setup-docker@v1
       with:
