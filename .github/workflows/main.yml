@@ -33,20 +33,9 @@ jobs:
     steps:
     - name: Checkout Code
       uses: actions/checkout@v2
-  
-    - name: Verify Docker
-      run: |
-        docker version
-        docker info
-
-    - name: Create empty Docker daemon.json
-      run: |
-        sudo mkdir -p /etc/docker
-        echo '{}' | sudo tee /etc/docker/daemon.json
-
-        
+      
     - name: set up docker
-      uses: docker-practice/actions-setup-docker@v1
+      uses: docker-practice/actions-setup-docker@master
       with:
         docker_version: '20.10.7'
 
