@@ -38,6 +38,12 @@ jobs:
       run: |
         docker version
         docker info
+
+    - name: Create empty Docker daemon.json
+      run: |
+        sudo mkdir -p /etc/docker
+        echo '{}' | sudo tee /etc/docker/daemon.json
+
         
     - name: set up docker
       uses: docker-practice/actions-setup-docker@v1
